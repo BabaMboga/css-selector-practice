@@ -18,6 +18,7 @@ body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* class selector */
 .navbar{
     background-color: chocolate;
     overflow: hidden;
@@ -37,4 +38,58 @@ body{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+}
+
+.navbar li a:hover {
+    background-color: #555;
+}
+
+/* attribute selector */
+[data-genre="action"] {
+    border-left: 5px solid red;
+}
+
+[data-genre="comedy"] {
+    border-left: 5px solid greenyellow;
+}
+
+[data-genre="drama"] {
+    border-left: 5px solid blue;
+}
+
+/* descendant selector */
+
+.movie-section h2{
+    color:cadetblue;
+    margin: 20px 0;
+}
+
+/* child selector */
+
+.movie-section > .movie-card {
+    background-color: #f9f9f9;
+    padding: 14px;
+    margin:10px 0;
+    border-radius: 5px;
+}
+
+/* adjacent sibling */
+.movie-card + .movie-card {
+    margin-top: 20px;
+}
+
+/* general sibling  */
+h2 ~ .movie-card {
+    border: 3px solid #d3d3
+}
+
+/* pseudo class selectors */
+/* structural pseudo class */
+.movie-card:first-child {
+    background-color: rgb(224, 28, 28);
+}
+
+/* dynamic pseudo class */
+.movie-card:hover {
+    background-color: yellow;
 }
